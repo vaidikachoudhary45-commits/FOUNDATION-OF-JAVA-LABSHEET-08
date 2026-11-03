@@ -1,0 +1,16 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        HashSet<String> dept = new HashSet<>();
+
+        dept.add("Computer Science");
+        dept.add("Management");
+        dept.add("IT");
+        dept.add("Computer Science");
+        dept.add("HR");
+        dept.add("IT");
+
+        System.out.println("Unique Departments: " + dept);
+    }
+}
