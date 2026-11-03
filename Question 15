@@ -1,0 +1,95 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<String> list = new ArrayList<>();
+        HashSet<Integer> set = new HashSet<>();
+        TreeSet<Integer> sorted = new TreeSet<>();
+
+        while (true) {
+            System.out.println("\n1. Add Student");
+            System.out.println("2. Remove Student");
+            System.out.println("3. Search Student");
+            System.out.println("4. Display Students");
+            System.out.println("5. Count Students");
+            System.out.println("6. Iterate Students");
+            System.out.println("7. Exit");
+
+            System.out.print("Enter choice: ");
+            int ch = sc.nextInt();
+
+            if (ch == 1) {
+                System.out.print("Enter ID: ");
+                int id = sc.nextInt();
+
+                sc.nextLine();
+                System.out.print("Enter Name: ");
+                String name = sc.nextLine();
+
+                if (set.add(id)) {
+                    list.add(id + "-" + name);
+                    sorted.add(id);
+                    System.out.println("Student Added!");
+                } else {
+                    System.out.println("ID already exists!");
+                }
+            }
+
+            else if (ch == 2) {
+                System.out.print("Enter ID: ");
+                int id = sc.nextInt();
+
+                if (set.remove(id)) {
+                    list.removeIf(s -> s.startsWith(id + "-"));
+                    sorted.remove(id);
+                    System.out.println("Student Removed!");
+                } else {
+                    System.out.println("Student Not Found!");
+                }
+            }
+
+            else if (ch == 3) {
+                System.out.print("Enter ID: ");
+                int id = sc.nextInt();
+
+                System.out.println(set.contains(id)
+                        ? "Student Found!"
+                        : "Student Not Found!");
+            }
+
+            else if (ch == 4) {
+                System.out.println("Student List: " + list);
+                System.out.println("Unique IDs: " + set);
+                System.out.println("Sorted IDs: " + sorted);
+            }
+
+            else if (ch == 5) {
+                System.out.println("Total Students: " + list.size());
+            }
+
+            else if (ch == 6) {
+                ListIterator<String> it = list.listIterator();
+
+                System.out.println("Forward:");
+                while (it.hasNext())
+                    System.out.println(it.next());
+
+                System.out.println("Backward:");
+                while (it.hasPrevious())
+                    System.out.println(it.previous());
+            }
+
+            else if (ch == 7) {
+                System.out.println("Program Ended!");
+                break;
+            }
+
+            else {
+                System.out.println("Invalid Choice!");
+            }
+        }
+    }
+}
