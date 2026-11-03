@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<String> courses = new ArrayList<>();
+
+        courses.add("Java");
+        courses.add("Python");
+        courses.add("C++");
+        courses.add("HTML");
+        courses.add("Database");
+
+        System.out.print("Enter course name: ");
+        String course = sc.nextLine();
+
+        if (courses.contains(course)) {
+            System.out.println("Course exists.");
+        } else {
+            System.out.println("Course not found.");
+        }
+    }
+}
