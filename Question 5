@@ -1,0 +1,20 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        TreeSet<Integer> roll = new TreeSet<>();
+
+        roll.add(105);
+        roll.add(102);
+        roll.add(110);
+        roll.add(101);
+        roll.add(108);
+        roll.add(104);
+        roll.add(107);
+        roll.add(103);
+        roll.add(109);
+        roll.add(106);
+
+        System.out.println("Sorted Roll Numbers: " + roll);
+    }
+}
