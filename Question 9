@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+
+        list.add("Aman");
+        list.add("Riya");
+        list.add("Rahul");
+
+        ListIterator<String> it = list.listIterator();
+
+        while (it.hasNext()) {
+            String name = it.next();
+
+            if (name.equals("Riya")) {
+                it.set("Priya");
+                it.add("Neha");
+            }
+        }
+
+        System.out.println("Updated List: " + list);
+    }
+}
