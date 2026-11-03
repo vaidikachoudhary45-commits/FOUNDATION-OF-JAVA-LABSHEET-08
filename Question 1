@@ -1,0 +1,22 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+
+        ArrayList<String> names = new ArrayList<>();
+
+        names.add("Aman");
+        names.add("Riya");
+        names.add("Rahul");
+        names.add("Priya");
+        names.add("Neha");
+        names.add("Karan");
+        names.add("Simran");
+        names.add("Vikas");
+        names.add("Anjali");
+        names.add("Mohit");
+
+        System.out.println("Student Names: " + names);
+        System.out.println("Total Students: " + names.size());
+    }
+}
